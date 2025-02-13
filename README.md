@@ -22,7 +22,7 @@ Installation
 Clone the repository
 
 sh
-git clone https://github.com/yourusername/pokedex-react-game.git
+git clone [https://github.com/turalbabirov/Pokemon-React-JS](https://github.com/turalbabirov/Pokemon-React-JS)
 Install NPM packages
 
 sh
