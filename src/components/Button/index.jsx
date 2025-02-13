@@ -1,9 +1,22 @@
 import React from "react";
+import ButtonBS from "react-bootstrap/Button";
 
 export default function Button({ children, ...props }) {
-	const { onSave, onCancel } = props;
-	
+   const { variant, onClick } = props;
+   // console.log(props);
+
+   const handleBtn = () => {
+      onClick();
+   };
+
    if (!children) return null;
 
-	return <button onClick={children.includes('Save') ? onSave : onCancel }>{children}</button>;
+   return (
+      <ButtonBS
+         onClick={handleBtn}
+         className={`${variant ? "btn btn-" + variant : ""}`}
+      >
+         {children[0]}
+      </ButtonBS>
+   );
 }

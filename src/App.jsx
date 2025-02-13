@@ -1,19 +1,12 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import Button from "./components/Button";
+import Container from "./components/Container";
 
 function App() {
-   const onSave = function () {
-      alert("Saved");
-   };
-   const onCancel = function () {
-      alert("Cancel");
-   };
-
    return (
       <>
-         <Button onSave={onSave}>Save</Button>
-         <Button onCancel={onCancel}>Cancel</Button>
+         <Container />
       </>
    );
 }
