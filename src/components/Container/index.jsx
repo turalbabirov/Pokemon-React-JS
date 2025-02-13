@@ -69,8 +69,8 @@ export default function Container() {
       <>
          <header className="d-flex flex-column align-items-center my-5">
             <h2>Pokedex</h2>
-            <Button variant="success" onClick={changeOpen}>
-               Start Game<h2>Pokedex</h2>
+            <Button variant={!isOpened ? 'success' : 'info'} onClick={changeOpen}>
+               {!isOpened ? 'Start Game' : 'Reply Game?'}
             </Button>
          </header>
 

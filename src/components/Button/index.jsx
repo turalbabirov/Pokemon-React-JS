@@ -3,7 +3,6 @@ import ButtonBS from "react-bootstrap/Button";
 
 export default function Button({ children, ...props }) {
    const { variant, onClick } = props;
-   // console.log(props);
 
    const handleBtn = () => {
       onClick();
@@ -16,7 +15,7 @@ export default function Button({ children, ...props }) {
          onClick={handleBtn}
          className={`${variant ? "btn btn-" + variant : ""}`}
       >
-         {children[0]}
+         {Array.isArray(children) ? children[0] : children}
       </ButtonBS>
    );
 }
